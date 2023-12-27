@@ -2,10 +2,58 @@
 
 ## Actividades
 
-- [ ] Poner a funcionar localmente el codigo del repo: https://github.com/Daniel-Hug/speech-input.
+- [x] Poner a funcionar localmente el codigo del repo: https://github.com/Daniel-Hug/speech-input.
 - [ ] Integrar el funcionamiendo de este codigo con FastAPI.
 - [ ] Adaptar un formulario sencillo que haga uso de este codigo con FastAPI.
 - [ ] Mirar como hacer una template de donde se obtengan datos.
+
+### Actividad 1 - Funcionamiento servidor local
+
+El repositorio de donde se tomo el código: https://github.com/Daniel-Hug/speech-input, lo unico que se hizo fue crear un entorno virtual (**base_form**) y ponderlo a correr desde un servidor local sencillo (Para mas información ver: [How to Launch an HTTP Server in One Line of Python Code](https://realpython.com/python-http-server/)). A continuación se detallan los pasos:
+
+1. Entorno virtual 
+   
+   ```
+   python -m venv base_form
+   cd base_form
+   .\Scripts\activate
+   python --version 
+   ```
+
+2. En nuestro caso, la version de python es: ```Python 3.11.5````. Ahora vamos a ejecutar servidor local de python tomando como directorio de prueba base la carpeta [speech-input](base_form/speech-input/). En este directorio se coloca todo el contenido del [repositorio original](https://github.com/Daniel-Hug/speech-input) y se sirve.
+   
+   ```
+   python -m http.server 8000 -d speech-input
+   ```
+
+   Si todo marcha bien debe salir algo como la siguiente imagen:
+
+   ![1](1_base.png)
+   
+3. Dentro de la carpeta [speech-input](base_form/speech-input/) se encuentra el archivo asociado al formulario [index.html](base_form/speech-input/index.html). Una vez arrancado el servidor se hace la prueba en el navegador usando la siguiente URL: ````localhost:8000``. Si todo esta bien sale lo siguiente:
+   
+   ![2](2_base.png)
+
+   Se mira que funcione.
+
+4. Si ya no hay nada por hacer, salir del entorno virtual:
+
+   ```
+   deactivate
+   ```
+
+#### Conclusion
+
+La prueba salió segun lo esperado.
+
+### Actividad 2 - Funcionamiento del codigo anterior usando FastAPI
+
+
+
+
+
+
+
 
 ## Referencias
 
@@ -19,3 +67,4 @@
 9. https://medium.com/web-developer/add-dictation-speech-to-text-to-input-textarea-speechrecognition-api-web-browser-9d0dd7fec1c7
 10. https://github.com/no22/jquery-webkit-speech-to-text
 11. https://github.com/Daniel-Hug/speech-input
+12. https://gist.github.com/rochacbruno/f444466f06ecf88085ab363105d4c505
