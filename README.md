@@ -1,5 +1,12 @@
 # Pruebas de formulario
 
+## Actividades
+
+- [ ] Poner a funcionar localmente el codigo del repo: https://github.com/Daniel-Hug/speech-input.
+- [ ] Integrar el funcionamiendo de este codigo con FastAPI.
+- [ ] Adaptar un formulario sencillo que haga uso de este codigo con FastAPI.
+- [ ] Mirar como hacer una template de donde se obtengan datos.
+
 ## Referencias
 
 1. https://www.phpied.com/x-webkit-speech-input-and-textareas/
