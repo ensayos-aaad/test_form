@@ -48,6 +48,22 @@ La prueba salió segun lo esperado.
 
 ### Actividad 2 - Funcionamiento del codigo anterior usando FastAPI
 
+Se va a repetir el procedimiendo general pero en este caso el objetivo es que el mismo programa pueda ser llamado desde FastAPI. Para esto se va a crear un nuevo entorno virtual.
+
+```
+# Crear el entorno
+python -m venv fastAPI_form
+# Acceder y activar el entorno
+cd fastAPI_form
+.\Scripts\activate
+python --version 
+# Instalar librerias
+pip install fastapi
+pip install "uvicorn[standard]"
+pip install jinja2
+```
+
+
 
 
 
