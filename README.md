@@ -3,7 +3,7 @@
 ## Actividades
 
 - [x] Poner a funcionar localmente el codigo del repo: https://github.com/Daniel-Hug/speech-input.
-- [ ] Integrar el funcionamiendo de este codigo con FastAPI.
+- [x] Integrar el funcionamiendo de este codigo con FastAPI.
 - [ ] Adaptar un formulario sencillo que haga uso de este codigo con FastAPI.
 - [ ] Mirar como hacer una template de donde se obtengan datos.
 
@@ -63,13 +63,43 @@ pip install "uvicorn[standard]"
 pip install jinja2
 ```
 
+Una vez hecho lo anterior, se copio todo el contenido del [repositorio original](https://github.com/Daniel-Hug/speech-input) en el directorio [webpages](fastAPI_form/webpages/) y se hicieron unos cambios menores en el archivo del formulario [index.html](fastAPI_form/webpages/index.html) con el fin de que las rutas de los estilos y el codigo javascript se pueda cargar con FastAPI. 
+
+Finalmente en el directorio raiz del proyecto ([fastAPI_form](fastAPI_form/)), se agrego el archivo python que hace el render de la pagina del formulario. Para ejecutar la aplicación se ejecuta el comando:
+
+```
+uvicorn main:app 
+```
+
+La salida es mas o menos la siguiente:
+
+![3](3_fastAPI.png)
 
 
+Luego, lo que se hace es cargar la pagina desde el browser usando la URL: ``` http://127.0.0.1:8000``` 
+
+![4](4_fastAPI.png)
+
+Si realizamos la grabación en el area de texto diciendo las palabras: "Esto es un ensayo", la información se transcribe tal y como se muestra a continuación:
+
+![5](5_fastAPI.png)
+
+Finalmente, se sale del servidor con dadon en consola:
+
+```
+CTRL + C
+```
+
+Y para salir del entorno, se ejecuta el comando:
 
 
+```
+deactivate
+```
 
+#### Conclusion
 
-
+La prueba salió segun lo esperado.
 
 ## Referencias
 
